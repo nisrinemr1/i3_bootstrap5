@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Bootstrap suite</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <!-- 
+        Rappel des taille de largeur responsive de bootstrap : 
+                
+            <576px	Extra small  -> en class bt = xs
+            ≥576px	Small        -> en class bt = sm
+            ≥768px	Medium       -> en class bt = md
+            ≥992px	Large        -> en class bt = lg
+            ≥1200px	X-Large      -> en class bt = xl
+            ≥1400px XX-Large     -> en class bt = xxl
+    -->
+
+    <!--
+        Ordre d'apprentissage par importance :
+        -> les container
+        -> les rows
+        -> les cols
+        -> les cols-(1-12)
+        -> les cols-(xs, sm, md, lg, xl, xxl)-(1-12), 
+        -> les offset-(1-12), 
+        -> les offset-(xs, sm, md, lg, xl, xxl)-(1-12), 
+        -> les justify-content
+        -> les align-items
+        -> order-(1-5)
+        -> w-(100,75,50,25)
+        -> ms- et me-
+    -->
+
+    <!--<div style="background-color:chartreuse;" class="container">
+        permet d'automatiser la largeur du container en suivant les breakpoint
+        <h1>toto</h1>
+    </div>-->
+
+    <!--
+        une col se situe toujours dans une row
+        pour nommé la taille des colonnes on retrouvera 
+        col -> prends toute la place disponible 
+        col avec une autre div col, elle prendront chacune 50% de la place
+        col- (1->12) prendra x% suivant la col- indiquée
+    -->
+
+    <div class="container-fluid">
+        <!-- permet de prendre tout la largeur du container-->
+        <!--
+        <div class='row'>
+            <div class="col-4">
+                <div class='row'>
+                    <div class="col">&nbsp;</div>
+                    <div class="col">&nbsp;</div>
+                </div>
+            </div>
+            <div class="col-3">&nbsp;</div>
+            <div class="col-5">&nbsp;</div>
+        </div>
+
+        <div class='row'>
+            <div class="col-1">&nbsp;</div>
+            <div class="col-5">&nbsp;</div>
+            <div class="col">&nbsp;</div>
+        </div>
+
+        <div class='row'>
+            <div style="background-color: aquamarine;" class="col-sm-6 col-xl-2 col-xxl-1">&nbsp;</div>
+            <div style="background-color: rgb(41, 136, 104);" class="col-sm-6 col-xl-8 col-xxl-10">&nbsp;</div>
+            <div style="background-color: rgb(15, 58, 43);" class="col-sm-12 col-xl-2 col-xxl-1">&nbsp;</div>
+        </div>
+        -->
+
+        <!--
+        <span>Alignement des LIGNES !!!</span>
+        <span>justify-content-around : permet d'aligner les colonnes horizontalement</span>
+        <div class='row justify-content-around'>
+            <div style="background-color: rgb(17, 0, 255);" class="col-sm-3">&nbsp;</div>
+            <div style="background-color: rgb(108, 90, 211);" class="col-sm-3">&nbsp;</div>
+            <div style="background-color: rgb(178, 175, 223);" class="col-sm-3">&nbsp;</div>
+        </div>
+        
+
+        <span> align-items-center : permet d'aligner verticalement au milieu</span>
+        <div style="height:500px;" class='row align-items-center'>
+            <div style="background-color: rgb(17, 0, 255);" class="col-sm-3">&nbsp;</div>
+            <div style="background-color: rgb(108, 90, 211);" class="col-sm-3">&nbsp;</div>
+            <div style="background-color: rgb(178, 175, 223);" class="col-sm-3">&nbsp;</div>
+        </div>
+        
+
+        <span> align-self-center : permet d'aligner les COLONNES </span>
+        <div style="height:500px;" class='row justify-content-around'>
+            <div style="background-color: rgb(17, 0, 255);" class="align-self-start col-sm-3">&nbsp;</div>
+            <div style="background-color: rgb(108, 90, 211);" class="align-self-center col-sm-3">&nbsp;</div>
+            <div style="background-color: rgb(178, 175, 223);" class="align-self-end col-sm-3">&nbsp;</div>
+        </div>
+        --> 
+
+        <!--
+        <span> w-(100,75,50,25): Permet de casser la ligne de autant de pixel(forcé)</span>
+        <div class='row'>
+            <div style="background-color: rgb(17, 0, 255);" class="col-sm-4">&nbsp;</div>
+            <div style="background-color: rgb(108, 90, 211);" class="col-sm-4">&nbsp;</div>
+            <div class="w-25"></div>
+            <div style="background-color: rgb(178, 175, 223);" class="col-sm-4">&nbsp;</div>
+        </div>
+        -->
+
+        <!--
+        <span>order-(0-5) permet de donner un ordre d'ffichage au bloc 0 étant prioritaire</span>
+        <div class='row'>
+            <div style="background-color: rgb(60, 255, 0);" class="col-sm-3 order-4">&nbsp;</div>
+            <div style="background-color: rgb(148, 78, 144);" class="col-sm-3 order-3">&nbsp;</div>
+            <div style="background-color: rgb(108, 90, 211);" class="col-sm-3 order-2">&nbsp;</div>
+            <div style="background-color: rgb(178, 175, 223);" class="col-sm-3 order-1">&nbsp;</div>
+        </div>
+        -->
+
+        <!--
+        <span>offset : offsetting permet de décaller de x colonnes</span>
+        <div class='row'>
+            <div style="background-color: rgb(60, 255, 0);" class="col-sm-3 col-lg-6 offset-1"></div>
+            <div style="background-color: rgb(148, 78, 144);" class="col-sm-6"></div>
+            <div style="background-color: rgb(108, 90, 211);" class="col-sm-4 offset-sm-2"></div>
+            <div style="background-color: rgb(178, 175, 223);" class="col-sm-6"></div>
+        </div>
+        -->
+
+        
+        <span>ms-auto ou ms-(0-5) ou ms-(xs,sm,md,lg,xl,xxl)-(0-5) : permet de créer une marge</span>
+        <span>me-auto ou me-(0-5) ou me-(xs,sm,md,lg,xl,xxl)-(0-5) : permet de séparer les colonnes soeur entre elle</span>
+        <div class='row'>
+            <div style="background-color: rgb(60, 255, 0);" class="col-sm-3 ms-5"></div>
+            <div style="background-color: rgb(148, 78, 144);" class="col-sm-6 ms-auto"></div>
+            <div style="background-color: rgb(108, 90, 211);" class="col-sm-4 ms-lg-auto"></div>
+            <div style="background-color: rgb(178, 175, 223);" class="col-sm-6"></div>
+            <div style="background-color: rgb(178, 175, 223);" class="col-sm-5 me-5"></div>
+            <div style="background-color: rgb(178, 175, 223);" class="col-sm-5"></div>
+            <div style="background-color: rgb(178, 175, 223);" class="col-sm-4"></div>
+        </div>
+        
+    </div>
+
+<!--
+    <div class="container-fluid">
+        <div class="row row-cols-3">
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+        </div>
+    </div>
+-->
+    <!--
+    <div style="background-color:rgb(0, 38, 255);" class="container-sm">100% wide until small breakpoint</div>
+    <div style="background-color:rgb(128, 255, 0);" class="container-md">100% wide until medium breakpoint</div>
+    <div style="background-color:rgb(255, 0, 183);" class="container-lg">100% wide until large breakpoint</div>
+    <div style="background-color:rgb(255, 0, 17);" class="container-xl">100% wide until extra large breakpoint</div>
+    <div style="background-color:rgb(255, 247, 0);" class="container-xxl">100% wide until extra extra large breakpoint</div>
+    -->
+</body>
+<script src="public/js/bootstrap.bundle.min.js"></script>
+</html>
