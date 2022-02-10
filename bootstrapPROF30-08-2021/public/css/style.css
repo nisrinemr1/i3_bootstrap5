@@ -1,9 +1,0 @@
-.row > div{
-    border: 1px solid grey;
-    height:150px;
-}
-
-.row > div > div.row > div{
-    border-color: red;
-}
-
